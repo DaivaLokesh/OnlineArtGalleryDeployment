@@ -1,4 +1,6 @@
 package com.klu.jfsd.springBoot.controller;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,9 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.klu.jfsd.springBoot.model.Customer;
+import com.klu.jfsd.springBoot.model.Painting;
 import com.klu.jfsd.springBoot.service.CustomerService;
+import com.klu.jfsd.springBoot.service.PaintingService;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 
 @Controller
@@ -17,16 +22,33 @@ public class CustomerController
 
 	@Autowired
 	private CustomerService customerService;
+	
+	@Autowired
+	private PaintingService paintingService;
 	@GetMapping("/customerreg")
 	public ModelAndView customerreg() {
 		ModelAndView mv=new ModelAndView();
 		mv.setViewName("customerreg");
 		return mv;
 	}
+	
+	@GetMapping("/customerhome")
+	public ModelAndView customerhome() {
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("customerhome");
+		return mv;
+	}
 	@GetMapping("/customerlogin")
 	public ModelAndView customerlogin() {
 		ModelAndView mv=new ModelAndView();
 		mv.setViewName("customerlogin");
+		return mv;
+	}
+	
+	@GetMapping("/customerprofile")
+	public ModelAndView customerprofile() {
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("customerprofile");
 		return mv;
 	}
 	
@@ -65,7 +87,11 @@ public class CustomerController
 		
 		Customer c=customerService.checkCustomerLogin(cemail, cpwd);
 		if(c!=null) {
+			HttpSession session=request.getSession();
+			session.setAttribute("customer", c);
+			
 			mv.setViewName("customerhome");
+			
 		}
 		else {
 			mv.setViewName("customerlogin");
@@ -74,4 +100,22 @@ public class CustomerController
 		return mv;
 		
 	}
+	
+	@GetMapping("/customerlogout")
+	public ModelAndView customerlogout() {
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@GetMapping("viewallpaintings")
+	public ModelAndView viewallpaintings() {
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("viewpaintings");
+		
+		List<Painting> painting=paintingService.viewAllPaintings();
+		mv.addObject("customerlist", painting);
+		return mv;
+	}
+	
 }

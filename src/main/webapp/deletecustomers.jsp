@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home - View All Sellers</title>
+<title>Home - View All Customers</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
     body {
@@ -110,33 +110,38 @@
 </style>
 </head>
 <body>
-
-<!-- Include the Sidebar Navbar -->
 <%@ include file="adminhome.jsp" %>
 
 <!-- Main Content Area -->
 <div class="container">
     <div>
-        <p class="count">Total Sellers = <c:out value="${count}"></c:out></p>
-        <h3>View All Sellers</h3>
+        <h3>Delete Customer</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
                     <th>Email</th>
-                    <th>Location</th>
-                    <th>Contact No</th>
+                    <th>LOCATION</th>
+                    <th>CONTACT NO</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${customerlist}" var="seller">
+                <c:forEach items="${customerlist}" var="customer">
                     <tr>
-                        <td><c:out value="${seller.id}"></c:out></td>
-                        <td><c:out value="${seller.name}"></c:out></td>
-                        <td><c:out value="${seller.email}"></c:out></td>
-                        <td><c:out value="${seller.location}"></c:out></td>
-                        <td><c:out value="${seller.contact}"></c:out></td>
+                        <td><c:out value="${customer.id}"></c:out></td>
+                        <td><c:out value="${customer.name}"></c:out></td>
+                        <td><c:out value="${customer.gender}"></c:out></td>
+                        <td><c:out value="${customer.dateofbirth}"></c:out></td>
+                        <td><c:out value="${customer.email}"></c:out></td>
+                        <td><c:out value="${customer.location}"></c:out></td>
+                        <td><c:out value="${customer.contactno}"></c:out></td>
+                        <td>
+                    <a href='<c:url value='delete?id=${customer.id}'></c:url>'>DELETE</a>
+                    </td>
                     </tr>
                 </c:forEach>
             </tbody>

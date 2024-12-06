@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home - View All Sellers</title>
+<title>Delete All Sellers</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
     body {
@@ -117,7 +117,6 @@
 <!-- Main Content Area -->
 <div class="container">
     <div>
-        <p class="count">Total Sellers = <c:out value="${count}"></c:out></p>
         <h3>View All Sellers</h3>
         <table class="table table-striped">
             <thead>
@@ -127,6 +126,7 @@
                     <th>Email</th>
                     <th>Location</th>
                     <th>Contact No</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
@@ -137,6 +137,9 @@
                         <td><c:out value="${seller.email}"></c:out></td>
                         <td><c:out value="${seller.location}"></c:out></td>
                         <td><c:out value="${seller.contact}"></c:out></td>
+                         <td>
+                    <a href='<c:url value='deleteit?id=${seller.id}'></c:url>'>DELETE</a>
+                    </td>
                     </tr>
                 </c:forEach>
             </tbody>

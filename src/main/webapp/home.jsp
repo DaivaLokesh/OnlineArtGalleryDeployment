@@ -66,7 +66,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -89,15 +89,15 @@
     <h2 class="text-center mb-4">Art Categories</h2>
     <div class="row">
         <div class="col-md-4">
-            <img src="https://source.unsplash.com/400x300/?abstract,art" alt="Abstract Art" class="img-fluid">
+            <img src="images/image1.jpeg" alt="Abstract Art" class="img-fluid">
             <h4 class="text-center mt-2">Abstract Art</h4>
         </div>
         <div class="col-md-4">
-            <img src="https://source.unsplash.com/400x300/?landscape,art" alt="Landscape Art" class="img-fluid">
+            <img src="images/images3.jpeg" alt="Landscape Art" class="img-fluid">
             <h4 class="text-center mt-2">Landscape Art</h4>
         </div>
         <div class="col-md-4">
-            <img src="https://source.unsplash.com/400x300/?modern,art" alt="Modern Art" class="img-fluid">
+            <img src="images/images4.jpeg" alt="Modern Art" class="img-fluid">
             <h4 class="text-center mt-2">Modern Art</h4>
         </div>
     </div>

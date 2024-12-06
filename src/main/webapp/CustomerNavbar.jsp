@@ -66,10 +66,17 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="sellerhome">Home</a>
-        <a href="addPainting">Add Paintings</a>
-        <a href="sellerprofile">My Profile</a>&nbsp;&nbsp;&nbsp;
+        <a href="customerhome">Home</a>
+         <div class="dropdown">
+            <a href="viewallpaintings">View Paintings </a>
+            <a href="#">View Scluptures</a>
+            <a href="#">View Artists</a>
+            <a href="#">View Paintings 4</a>
+          </div>
+        <a href="customerprofile">My Profile</a>
         <a href="home">Logout</a>
+       
     </div>
+    
 </body>
 </html>

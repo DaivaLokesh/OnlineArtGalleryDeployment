@@ -40,4 +40,42 @@ public class AdminServiceImpl implements AdminService {
 		return sellerRepository.findAll();
 	}
 
+	@Override
+	public long customercount() {
+		
+		return customerRepository.count();
+	}
+
+	@Override
+	public long sellercount() {
+		return sellerRepository.count();
+	}
+
+	@Override
+	public String DeleteCustomer(int id) {
+		// TODO Auto-generated method stub
+		customerRepository.deleteById(id);
+		return "Customer Deleted Successfully";
+	}
+
+	@Override
+	public String AddCustomer(Customer customer) {
+		
+		customerRepository.save(customer);
+		return "Customer Inserted Successfully";
+	}
+
+	@Override
+	public String DeleteSeller(int id) {
+		sellerRepository.deleteById(id);
+		return "Seller Deleted Successfully";
+	}
+
+	@Override
+	public String AddSeller(Seller seller) {
+		sellerRepository.save(seller);
+		// TODO Auto-generated method stub
+		return "Seller Added Successfully";
+	}
+
 }
