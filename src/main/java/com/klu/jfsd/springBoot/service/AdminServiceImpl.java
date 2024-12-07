@@ -53,7 +53,6 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public String DeleteCustomer(int id) {
-		// TODO Auto-generated method stub
 		customerRepository.deleteById(id);
 		return "Customer Deleted Successfully";
 	}
@@ -74,7 +73,6 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public String AddSeller(Seller seller) {
 		sellerRepository.save(seller);
-		// TODO Auto-generated method stub
 		return "Seller Added Successfully";
 	}
 
