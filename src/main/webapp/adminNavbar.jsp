@@ -150,19 +150,15 @@
         <div class="dashboard-cards">
             <div class="dashboard-card">
                 <h4>Total Customers</h4>
-                <p>150</p>
+                <p>10</p>
             </div>
             <div class="dashboard-card">
                 <h4>Total Sellers</h4>
-                <p>50</p>
-            </div>
-            <div class="dashboard-card">
-                <h4>Pending Orders</h4>
-                <p>12</p>
+                <p>5</p>
             </div>
             <div class="dashboard-card">
                 <h4>Total Sales</h4>
-                <p>$25,000</p>
+                <p>Rs.2,000</p>
             </div>
         </div>
 

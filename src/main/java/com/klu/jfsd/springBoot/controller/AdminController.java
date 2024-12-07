@@ -39,6 +39,13 @@ public class AdminController
 		return mv;
 	}
 	
+	@GetMapping("adminNavbar")
+	public ModelAndView adminnavbar() {
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("adminNavbar");
+		return mv;
+	}
+	
 	@PostMapping("checkadminlogin")
 	public ModelAndView checkadminlogin(HttpServletRequest request)
 	{

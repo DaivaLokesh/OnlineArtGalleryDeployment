@@ -73,7 +73,7 @@ public class CustomerController
 		
 		String message=customerService.customerRegistration(customer);
 		ModelAndView mv=new ModelAndView();
-		mv.setViewName("regsuccess");
+		mv.setViewName("customerlogin");
 		mv.addObject("message",message);
 		return mv;
 	}

@@ -113,18 +113,22 @@
 <section id="contact" class="container my-5">
     <h2 class="text-center">Contact Us</h2>
     <p class="text-center mb-4">Have questions or inquiries? Feel free to reach out to us!</p>
-    <form class="mx-auto" style="max-width: 600px;">
+    <form class="mx-auto" style="max-width: 600px;" method="POST" action="sendMail">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            <input type="text" class="form-control" name="Cname" id="name" placeholder="Enter your name" required>
         </div>
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <input type="email" class="form-control" name="Cemail" id="email" placeholder="avinashreddy2428@gmail.com" required>
+        </div>
+        <div class="form-group">
+         <label for="subject">Subject:</label>
+        <input type="text" class="form-control" name="Csubject" id="subject" name="subject" required><br><br>
         </div>
         <div class="form-group">
             <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            <textarea class="form-control" name="Cmessage" id="message" rows="4" placeholder="Enter your message" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
     </form>

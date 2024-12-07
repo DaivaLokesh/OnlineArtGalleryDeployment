@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ page import="com.klu.jfsd.springBoot.model.Admin"%>
-<%
-Admin a=(Admin)session.getAttribute("admin");
-%>
+
 <!DOCTYPE html>
 
 <html>
@@ -134,7 +132,7 @@ Admin a=(Admin)session.getAttribute("admin");
 <body>
 welcome
     <div class="navbar">
-        <a href="adminhome" class="active">Home</a>
+        <a href="adminNavbar" class="active">Home</a>
         <div class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Customers</a>
             <div class="dropdown-menu">
@@ -150,7 +148,15 @@ welcome
                 <a class="dropdown-item" href="viewallsellers">View All Sellers</a>
                 <a class="dropdown-item" href="deletesellers">Delete Seller</a>
             </div>
-        </div>
+        </div>&nbsp;
+        
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Artists</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="addArtist">Add New Artist</a>
+                     <a class="dropdown-item" href="viewallartists">View All Artist</a>
+            </div>
+        </div>&nbsp;
         <a href="adminlogin">Logout</a>
     </div>
     
