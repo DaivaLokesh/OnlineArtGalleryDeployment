@@ -8,6 +8,6 @@ public class ExhibitionController {
 
 	@GetMapping("/exhibition")
 	public String exhibition() {
-		return "exhibition-list";
+		return "Exhibition";
 	}
 }

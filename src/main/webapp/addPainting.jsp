@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<%@include file="sellerhome.jsp" %>
+<%@include file="SellerNavbar.jsp" %>
     <div class="container mt-5">
         <h3 class="text-center">Add Painting</h3>
         <form method="POST" action="/addPainting" enctype="multipart/form-data">

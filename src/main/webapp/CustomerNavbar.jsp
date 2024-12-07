@@ -69,9 +69,9 @@
         <a href="customerhome">Home</a>
          <div class="dropdown">
             <a href="viewallpaintings">View Paintings </a>
-            <a href="#">View Scluptures</a>
+            <a href="exhibition">Exhibitions</a>
             <a href="#">View Artists</a>
-            <a href="#">View Paintings 4</a>
+            
           </div>
         <a href="customerprofile">My Profile</a>
         <a href="home">Logout</a>

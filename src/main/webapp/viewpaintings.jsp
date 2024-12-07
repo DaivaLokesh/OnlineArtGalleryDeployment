@@ -23,6 +23,7 @@
                     <th>Title</th>
                     <th>Description</th>
                     <th>Price</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,7 +39,11 @@
                         <td><c:out value="${seller.title}"></c:out></td>
                         <td><c:out value="${seller.description}"></c:out></td>
                         <td><c:out value="${seller.price}"></c:out></td>
+                        <td>
+                          <a href="/orders">Pay With RazorPay</a>
+                         </td>
                     </tr>
+                    
                 </c:forEach>
             </tbody>
         </table>

@@ -10,33 +10,82 @@ Customer c = (Customer) session.getAttribute("customer");
     <meta charset="UTF-8">
     <title>Customer Profile</title>
     <style>
+        /* General reset and body styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        h2 {
-            text-align: center;
+            background-color: #e8f0f2;
             color: #333;
         }
+
+        /* Container styling */
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            border-top: 5px solid #00bcd4;
+        }
+
+        /* Heading styling */
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #00bcd4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Profile detail styling */
         .profile-detail {
-            margin: 10px 0;
-            font-size: 16px;
-            line-height: 1.6;
+            margin: 15px 0;
+            font-size: 18px;
+            line-height: 1.8;
             color: #555;
         }
+
         .profile-label {
+            font-weight: 700;
+            color: #2f2f2f;
+            margin-right: 15px;
+        }
+
+        /* Adding hover effect on profile details */
+        .profile-detail:hover {
+            background-color: #f1f1f1;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Navbar inclusion spacing */
+        .navbar-container {
+            padding: 0 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00bcd4;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
             font-weight: bold;
-            color: #222;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -59,9 +108,10 @@ Customer c = (Customer) session.getAttribute("customer");
         <div class="profile-detail">
             <span class="profile-label">Location:</span> <%= c.getLocation() %>
         </div>
-        <div class="profile-detail">
-            
-        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 My Web Application | <a href="privacy-policy.jsp">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
