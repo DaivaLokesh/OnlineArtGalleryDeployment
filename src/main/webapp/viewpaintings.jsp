@@ -10,7 +10,7 @@
 </head>
 <body>
 <div>
-<%@include file="customerhome.jsp" %>
+<%@include file="CustomerNavbar.jsp" %>
 </div>
 <div class="container">
     <div>
